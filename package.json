@@ -1,0 +1,19 @@
+{
+  "name": "dev-connector",
+  "version": "1.0.0",
+  "description": "Social network for developers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesthomasdavey/dev-connector.git"
+  },
+  "author": "James Thomas Davey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamesthomasdavey/dev-connector/issues"
+  },
+  "homepage": "https://github.com/jamesthomasdavey/dev-connector#readme"
+}
