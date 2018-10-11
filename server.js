@@ -1,11 +1,18 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 
+// require routes
 const users = require("./routes/api/users");
 const profile = require("./routes/api/profile");
 const posts = require("./routes/api/posts");
 
+// run express as app
 const app = express();
+
+// body parser middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // configure db
 const db = require("./config/keys").mongoURI;
@@ -13,9 +20,10 @@ const db = require("./config/keys").mongoURI;
 // connect mongoose to db
 mongoose
   .connect(db)
-  .then(() => console.log("MongoDB Connected"))
+  .then(() => console.log("MongoDB connected."))
   .catch(err => console.log(err));
 
+// root route
 app.get("/", (req, res) => res.send("Hello."));
 
 // use routes
