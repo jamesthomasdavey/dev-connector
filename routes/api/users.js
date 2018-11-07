@@ -86,7 +86,9 @@ router.post('/login', (req, res) => {
       if (isMatch) {
         // store user info in object sans password
         const payload = {
-          _id: user._id
+          _id: user._id,
+          name: user.name,
+          avatar: user.avatar
         };
         // send token to user
         jwt.sign(
