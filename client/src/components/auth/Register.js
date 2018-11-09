@@ -89,7 +89,7 @@ class Register extends Component {
                   name="password2"
                   value={this.state.password2}
                   onChange={this.onChange}
-                  type="password2"
+                  type="password"
                   error={errors.password2}
                 />
                 <input type="submit" className="btn btn-info btn-block mt-4" />
